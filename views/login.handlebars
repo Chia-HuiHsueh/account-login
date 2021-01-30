@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-12 col-lg-10 col-xl-8 mx-auto mt-5" style="width:380px;">
+    <div class=" card" style="background-color:#B2B7C2;">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#FFFFFF;">Account Login <i class="fas fa-key"></i></h5>
+        <hr>
+        <form action="/" method="post">
+          <div class="form-group form-row">
+            <div class="col-md-12">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email"
+                  value="{{userInput.email }}" required>
+                <label for="floatingInput">Email address</label>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"
+                  value="{{userInput.password }}" required>
+                <label for="floatingPassword">Password</label>
+              </div>
+            </div>
+          </div>
+          {{#if result}}
+          <div class="col-md-12">
+            <div class="alert" style="background-color:#DE897A;color:#FFFFFF;" role="alert">
+              <span class="mr-2">{{result}}</span>
+            </div>
+          </div>
+          {{/if}}
+          <button type="submit" class="btn" style="background-color:#AED8E2;color:#FFFFFF;">Login </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
